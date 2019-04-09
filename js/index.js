@@ -21,41 +21,33 @@ body.addEventListener("keydown", function(event) {
     event.preventDefault();
     body.classList.add("apply-shake");
 
-    // reset the after a short delay
+    // reset after a short delay
       setTimeout(function() {
         body.classList.remove("apply-shake");
       }, 500);
 });
 
 // =========== drag & drop - images ==========
-function allowDrop(ev) {
-  ev.preventDefault();
+function allowDrop(event) {
+  event.preventDefault();
 }
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
 }
 
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(data));
 }
 
 // =========== page scroll - sticky nav ==========
-window.addEventListener('scroll', function() {
-  classToggle()
-});
-
 let header = document.querySelector("header");
 
-function classToggle() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
+window.addEventListener('scroll', function() {
+  header.classList.add("sticky");
+});
 
 // =========== on load - Modal ==========
 
