@@ -58,16 +58,19 @@ var span = document.querySelectorAll(".close")[0];
 
 window.addEventListener('load', function(event) {
     modal.style.display = "block";
+    modal.style.transition = 'all 0.5s linear';
 });
 
 // When the user clicks on <span> (x), close the modal
 span.addEventListener('click', function(event) {
   modal.style.display = "none";
+  modal.style.transition = 'all 0.5s linear';
 });
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener('click', function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    modal.style.transition = 'all 0.5s linear';
   }
 });
