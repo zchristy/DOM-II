@@ -1,3 +1,5 @@
+
+// =========== MouseOver - transform ==========
 const image = document.querySelectorAll('div img');
 
 image.forEach(function(val){
@@ -12,6 +14,7 @@ image.forEach(function(val){
   });
 });
 
+// =========== keydown - shake ==========
 const body = document.querySelector("body");
 
 body.addEventListener("keydown", function(event) {
@@ -24,6 +27,7 @@ body.addEventListener("keydown", function(event) {
       }, 500);
 });
 
+// =========== drag & drop - images ==========
 function allowDrop(ev) {
   ev.preventDefault();
 }
@@ -36,4 +40,21 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
+}
+
+// =========== page scroll - sticky nav ==========
+window.addEventListener('scroll', function() {
+  classToggle()
+};);
+
+let header = document.querySelector("header");
+
+let sticky = header.offsetTop;
+
+function classToggle() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
