@@ -153,4 +153,31 @@
     }
   }
 
+  .button-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    border-top: 2px dashed @navigation-border;
+
+    h4 {
+      margin-top: 30px;
+    }
+
+    .button-stop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+
+      .btn {
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
+      }
+    }
+  }
+
+
 }// home

@@ -485,3 +485,46 @@ img {
   width: 30%;
   margin-top: 30px;
 }
+.home .button-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  border-top: 2px dashed #C0C0C0;
+}
+.home .button-section h4 {
+  margin-top: 30px;
+}
+.home .button-section .button-stop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+.home .button-section .button-stop .btn {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 45px;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  .home .button-section .button-stop .btn {
+    width: 100%;
+  }
+}
+.home .button-section .button-stop .btn:hover {
+  background: #FFFFFF;
+  color: #17A2B8;
+}

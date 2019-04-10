@@ -125,3 +125,15 @@ const nav = document.querySelector('nav');
 nav.addEventListener('click', function(event) {
   event.preventDefault();
 });
+
+// =========== stopPropogation - Buttons ==========
+const btn2 = document.querySelector('.btn2');
+const btnContainer = document.querySelector('.button-section');
+
+btnContainer.addEventListener('click', function(event) {
+  if(event.target === btn2) {
+    alert(`You found me!`);
+  } else {
+    event.stopPropogation();
+  }
+});
