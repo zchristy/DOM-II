@@ -128,12 +128,21 @@ nav.addEventListener('click', function(event) {
 
 // =========== stopPropogation - Buttons ==========
 const btn2 = document.querySelector('.btn2');
-const btnContainer = document.querySelector('.button-section');
+const btnContainer = document.querySelector('.button-stop');
+
+// btnContainer.addEventListener('click', function(event) {
+//   if(event.target === btn2) {
+//     alert(`You found me!`);
+//   } else {
+//     event.stopPropogation();
+//   }
+// });
 
 btnContainer.addEventListener('click', function(event) {
-  if(event.target === btn2) {
-    alert(`You found me!`);
-  } else {
-    event.stopPropogation();
-  }
+  alert('Parent');
 });
+
+btn2.addEventListener('click', function(event) {
+    alert('you found me');
+    event.stopPropagation();
+  });
