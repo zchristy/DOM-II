@@ -117,3 +117,11 @@ logo.addEventListener('dblclick', function(event) {
       alert('You thought it was a link huh?')
     }, 500);
 });
+
+// =========== preventDefault() - nav items ==========
+
+const nav = document.querySelector('nav');
+
+nav.addEventListener('click', function(event) {
+  event.preventDefault();
+});
