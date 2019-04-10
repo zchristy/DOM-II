@@ -20,8 +20,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -105,10 +105,79 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
       }
     }
   }
+
+  section .favorite-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-top: 2px dashed @navigation-border;
+    margin-bottom: 30px;
+
+    h4 {
+      margin-top: 30px;
+    }
+
+    #drop-zone {
+    width: 50rem;
+    height: 40rem;
+    margin: 10px;
+    padding: 30px;
+    border: 2px dashed @navigation-border;
+    }
+  }
+
+  .selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    border-top: 2px dashed @navigation-border;
+
+    h4 {
+      margin-top: 30px;
+    }
+
+    input {
+      padding: 10px 10px;
+      width: 30%;
+      margin-top: 30px;
+    }
+  }
+
+  .button-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    border-top: 2px dashed @navigation-border;
+
+    h4 {
+      margin-top: 30px;
+    }
+
+    .button-stop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+
+      .btn {
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
+      }
+    }
+  }
+
+
 }// home

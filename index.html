@@ -22,45 +22,55 @@
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="https://learn.lambdaschool.com/fsw/module/recjwv3rifa4nfxbn" target="_blank">Home</a>
         <a class="nav-link" href="#">About Us</a>
         <a class="nav-link" href="#">Blog</a>
         <a class="nav-link" href="#">Contact</a>
       </nav>
     </div>
   </header>
-     
+
   <div class="container home">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Welcome To Fun Bus.... Enjoy!</h2>
+      </div>
+    </div>
+
     <header class="intro">
-      <img src="img/fun-bus.jpg" alt="bus in the sand">
+      <img id="drag1" src="img/fun-bus.jpg" alt="bus in the sand" draggable="true" ondragstart="drag(event)">
       <h2>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
     </header>
     <section class="content-section">
       <div class="text-content">
         <h2>Let's Go!</h2>
-        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
+        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p>
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
       <div class="img-content">
-        <img src="img/adventure.jpg" alt="Let's go on an adventure!">
+        <img id="drag2" src="img/adventure.jpg" alt="Let's go on an adventure!" draggable="true" ondragstart="drag(event)">
       </div>
     </section>
     <section class="content-section inverse-content">
       <div class="img-content">
-          <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!">
+          <img id="drag3" src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!" draggable="true" ondragstart="drag(event)">
       </div>
       <div class="text-content">
         <h2>Adventure Awaits</h2>
-        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
+        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p>
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
-     
+
     </section>
     <section class="content-destination">
       <h2>Pick Your Destination</h2>
       <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
-      <img src="img/destination.jpg" alt="Second slide">
+      <img id="drag4" src="img/destination.jpg" alt="Second slide" draggable="true" ondragstart="drag(event)">
     </section>
     <section class="content-pick">
 
@@ -80,9 +90,39 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+
+    <section>
+      <div class="favorite-picture">
+        <h4>Pick your favorite picture on the page and drag it to the box below!</h4>
+        <div id="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="selection">
+        <h4>Step 1. Write something in the input box</h4>
+        <h4>Step 2. Highlight what you wrote and see what happens!</h4>
+        <input placeholder="Type Here"></input>
+      </div>
+    </section>
+
+    <section class="button-section">
+        <h4>Click each button.... which one works?</h4>
+        <div class="button-stop">
+          <div class="btn btn1">Button 1</div>
+          <div class="btn btn2">Button 2</div>
+          <div class="btn btn3">Button 3</div>
+      </div>
+    </section>
+
   </div><!-- container -->
 
   <footer class="footer">
+    <form class="form">
+      <h4>Subscribe to Newsletter</h4>
+      <input type="text" placeholder="EMAIL">
+      <div class="button-email">SEND</div>
+    </form>
     <p>Copyright Fun Bus 2018</p>
   </footer>
 
