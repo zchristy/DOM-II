@@ -1,8 +1,44 @@
 .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100%;
   border-top: 2px dashed @silver;
   background: @sandy-beach;
-  
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35%;
+    align-items: center;
+    vertical-align: middle;
+
+    h4 {
+      margin: 0;
+      padding: 0;
+    }
+
+    input {
+      height: 30px;
+      border-radius: 5px;
+    }
+
+    .button-email {
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: @white;
+      background-color: @eastern-blue;
+
+      &:hover {
+        color: @font-color;
+        background-color: @eastern-blue;
+        border: 1px solid @white;
+      }
+    }
+  }
+
   p {
     text-align: center;
     color: @font-color;
